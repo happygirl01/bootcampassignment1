@@ -1,0 +1,17 @@
+{
+  "name": "bootcampassignment",
+  "version": "1.0.0",
+  "description": "my first assignment",
+  "main": "app/library.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha tests/*.js"
+  },
+  "author": "labake",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^3.5.0"
+  }
+}
