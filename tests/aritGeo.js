@@ -1,15 +1,11 @@
 
 // testing code goes here
-
-
-var myApp = require('../app/library.js');
+var aritGeo = require('../app/aritGeo.js');
 (function(){
   'use strict';
   var chai = require('chai');
-  var assert = chai.expect;
-
-
-
+  var expect = chai.expect;
+  
   describe("Determine the sequence of an array of numbers: ", function() {
 
     describe("Case for an empty array", function() {
