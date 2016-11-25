@@ -1,22 +1,28 @@
-var i, minNum, maxNum, array;
-minNum = maxNum = array[0];
-for (i =1; i <= array.length(); i++) {
+function findMinMax (array){
+		var i, minNum, maxNum;
+		maxNum = array[0];
+		minNum = array[0];
 
-	if (array[1] > maxNum) {
+		for (i =1; i < array.length; i++) {
 
-		maxNum = array[1];
-	}
+			if (array[i] > maxNum) {
 
-	if (array[1] < minNum) {
+				maxNum = array[i];
+			}
 
-		minNum = array[1];
-	} 
+			if (array[i] < minNum) {
 
-	if (minNum == maxNum){
-		return array[minNum];
-	}
-	else {
-	  
-		return array(minNum,maxNum);
-	}
-} 
+				minNum = array[i];
+			} 
+		}
+		if (minNum === maxNum){
+			return [minNum]
+		}
+		else {
+		  
+			return [minNum, maxNum]
+		}
+}
+
+module.exports = findMinMax;
+

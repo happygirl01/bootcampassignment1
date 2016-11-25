@@ -1,35 +1,33 @@
 // testing code goes here
+var findMinMax = require('../app/minMax.js');
+(function(){
+  'use strict';
+  var chai = require('chai');
+  var expect = chai.expect;
+    
+  describe('Min-Max Numbers in a List: ', function () {
 
-'use strict'
+      describe('Return the min and max number in the list in a new list follows `[min, max]`', function () {
 
-var chai = require('chai');
-var assert = chai.expect;
+        it('should return [1,4] for [1, 2, 3 , 4]', function () {
+          expect(findMinMax([1, 2, 3, 4])).to.eql([1, 4]);
+        });
 
-var myApp = require('../app/library.js');
+        it('should return [4, 6] for [6, 4]', function () {
+          expect(findMinMax([6, 4])).to.eql([4, 6]);
+        });
 
-describe('Min-Max Numbers in a List: ', function () {
+        it('should return [2, 78] for [4, 66, 6, 44, 7, 78, 8, 68, 2]', function () {
+          expect(findMinMax([4, 66, 6, 44, 7, 78, 8, 68, 2])).to.eql([2, 78]);
+        });
 
-    describe('Return the min and max number in the list in a new list follows `[min, max]`', function () {
-
-      it('should return [1,4] for [1, 2, 3 , 4]', function () {
-        expect(findMinMax([1, 2, 3, 4])).to.equal([1, 4]);
       });
 
-      it('should return [4, 6] for [6, 4]', function () {
-        expect(findMinMax([6, 4])).to.equal([4, 6]);
-      });
+      describe('Return the number in the list in a new list follows `[min]` when the number is the min and max number in that list', function () {
 
-      it('should return [2, 78] for [4, 66, 6, 44, 7, 78, 8, 68, 2]', function () {
-        expect(findMinMax([4, 66, 6, 44, 7, 78, 8, 68, 2])).to.equal([2, 78]);
+        it('should return [4] for [4, 4, 4, 4]', function () {
+          expect(findMinMax([4, 4, 4, 4])).to.eql([4]);
+        });
       });
-
     });
-
-    describe('Return the number in the list in a new list follows `[min]` when the number is the min and max number in that list', function () {
-
-      it('should return [4] for [4, 4, 4, 4]', function () {
-        expect(findMinMax([4, 4, 4, 4])).to.equal([4]);
-      });
-    });
-  });
-});
+  })();
